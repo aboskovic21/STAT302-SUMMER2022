@@ -1,0 +1,396 @@
+---
+title: "STAT 302, Lecture Slides 7"
+subtitle: "Simulation Studies"
+author: "Sarah Teichman"
+date: ""
+output:
+  xaringan::moon_reader:
+    css: ["default", "gao-theme.css", "gao-theme-fonts.css"]
+    nature:
+      highlightStyle: default
+      highlightLines: true
+      countIncrementalSlides: false
+      titleSlideClass: ["center"]
+---
+
+```{r setup, include=FALSE, purl=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(comment = "##")
+knitr::opts_chunk$set(cache = FALSE)
+knitr::opts_chunk$set(error = TRUE)
+library(kableExtra)
+library(tidyverse)
+```
+
+# Today's pet picture 
+
+
+```{r, echo = FALSE, out.width = "400px", fig.align = "center"}
+knitr::include_graphics("../../files/images/pets/Luda.png")
+```
+
+Thanks Riley! 
+
+---
+
+# Outline
+
+1. Why simulate?
+2. How to simulate?
+
+.middler[**Goal:** Learn how to use simulation to answer statistical questions!]
+
+---
+
+class: inverse
+
+.sectionhead[Part 1. Why simulate?]
+
+---
+
+# Why simulate? 
+
+* Can you think of any examples from this or other classes when you've used simulation to answer a question? 
+
+---
+
+# Why simulate? 
+
+* In science, how do we support or refute a hypothesis? 
+
+--
+
+* We run an experiment! 
+
+--
+
+* Experiments let us work in a setting where we have precise control
+
+---
+
+# Simulation 
+
+* Often we don't have the resources to run an experiment 
+
+--
+
+* Instead, we can run a simulation 
+
+--
+
+* Simulation: Computer experiment that involves creating data by pseudo-random sampling and using that data to study a topic or answer a question 
+
+--
+
+* Intuition: If we do something random over and over again, we can eventually learn about the expected behavior
+
+---
+
+# Why do we simulate? 
+
+* We have some statistical problem that we don't know how to answer analytically or want to check our answer for
+
+--
+
+  + What is the probability of flipping $5$ coins and getting all heads? 
+  
+--
+
+* We want to evaluate the performance of a statistical method 
+
+--
+
+  + If our residuals in a linear model are not normal, can we still trust the estimates of our coefficients? 
+  
+--
+
+  + For a given $H_0$ and $H_a$ and statistical test, what is the relationship between Type I and Type II error? 
+
+---
+
+# Example: flipping coins 
+
+What is the probability of flipping $5$ coins and getting all heads? 
+
+```{r}
+0.5^(5)
+```
+
+---
+
+# Example: flipping coins 
+
+What is the probability of flipping $5$ coins and getting all heads?
+
+```{r}
+coins <- rbinom(n = 100000, size = 5, prob = 0.5)
+mean(coins == 5)
+```
+
+---
+
+# Example: variance of the sample mean
+
+For a set of random variables $X_1,\ldots,X_n$, each independent with variance $\sigma^2$, what is the variance of the sample mean? 
+
+\begin{align*}
+Var(\bar{X}) &= Var(\frac{1}{n}\sum_{i=1}^n X_i) \\
+&= \frac{1}{n^2}\sum_{i=1}^n Var(X_i) \\
+&= \frac{n\sigma^2}{n^2} \\
+&= \frac{\sigma^2}{n}
+\end{align*}
+
+---
+
+# Example: variance of the sample mean
+
+For a set of random variables $X_1,\ldots,X_n$, each independent with variance $\sigma^2$, what is the variance of the sample mean? 
+
+We can individually generate data and calculate sample means. But this doesn't give us information about the variance of these means. 
+
+```{r}
+data1 <- rexp(10, rate = 1)
+mean(data1)
+data2 <- rexp(100, rate = 1)
+mean(data2)
+data3 <- rexp(1000, rate = 1)
+mean(data3)
+```
+
+---
+
+# Example: variance of the sample mean
+
+We need to randomly generate data many times to answer our question
+
+```{r}
+n_sim <- 10000
+result_matrix <- matrix(nrow = n_sim, ncol = 3)
+for (i_sim in 1:n_sim) {
+  result_matrix[i_sim, 1] <- mean(rexp(10, rate = 1))
+  result_matrix[i_sim, 2] <- mean(rexp(100, rate = 1))
+  result_matrix[i_sim, 3] <- mean(rexp(1000, rate = 1))
+}
+head(result_matrix)
+```
+
+---
+
+# Example: variance of the sample mean
+
+We need to randomly generate data many times to answer our question
+
+```{r}
+var(result_matrix[, 1])
+var(result_matrix[, 2])
+var(result_matrix[, 3])
+```
+
+---
+
+class: inverse
+
+.sectionhead[Part 1. How to simulate?]
+
+---
+
+# Psuedocode 
+
+* Psuedocode: writing out the steps of an algorithm 
+
+--
+
+* Useful in general for programming, but especially when designing a simulation study 
+
+---
+
+# Psuedocode 
+
+## Example: flipping coins
+
+Goal: find probability of getting $5$ heads in $5$ coin flips 
+
+* make result vector to hold number of heads for $100000$ trials 
+* for $100000$ trials, do the following: 
+  + Flip $5$ coins 
+  + Count and record the number of heads 
+* Report the proportion of trials that had $5$ heads 
+
+---
+
+# Psuedocode 
+
+## Example: variance of sample mean 
+
+Goal: find variance of sample mean 
+
+* set sample sizes to be $10$, $100$, and $1000$ 
+* make result matrix to hold sample means for $10000$ trials, for each sample size 
+* for $10000$ trials, do the following: 
+  + Generate $10$ independent and identically distributed observations and calculate mean 
+  + Generate $100$ independent and identically distributed observations and calculate mean 
+  + Generate $1000$ independent and identically distributed observations and calculate mean 
+* Calculate variance of means from $10$ observations 
+* Calculate variance of means from $100$ observations 
+* Calculate variance of means from $1000$ observations 
+
+---
+
+# Write a function 
+
+* It is often helpful to write a function that will generate data and do any required calculations for a single trial 
+
+---
+
+# Write a function 
+
+## Example: flipping coins
+
+```{r}
+flip_coins_once <- function() {
+  coins <- rbinom(n = 1, size = 5, prob = 0.5)
+  return(mean(coins == 5))
+}
+```
+
+---
+
+# Write a function 
+
+## Example: variance of sample mean 
+
+```{r}
+generate_data_once <- function(n) {
+  data <- rexp(n, rate = 1)
+  return(mean(data))
+}
+```
+
+---
+
+# Test function 
+
+* Often we will run a simulation with a large number of trials 
+
+--
+
+* Sometimes this will take a long time 
+
+--
+
+* It's always safest to first test with a small number of trials 
+
+---
+
+# Test function 
+
+Start with `nsim = 10`. Check that this works and gives you reasonable results! 
+
+```{r}
+n_sim <- 10
+result_matrix <- matrix(nrow = n_sim, ncol = 3)
+for (i_sim in 1:n_sim) {
+  result_matrix[i_sim, 1] <- mean(rexp(10, rate = 1))
+  result_matrix[i_sim, 2] <- mean(rexp(100, rate = 1))
+  result_matrix[i_sim, 3] <- mean(rexp(1000, rate = 1))
+}
+```
+
+---
+
+# Test function 
+
+If `nsim = 10` works as expected, them move on to your planned number of simulations. 
+
+```{r}
+n_sim <- 10000
+result_matrix <- matrix(nrow = n_sim, ncol = 3)
+for (i_sim in 1:n_sim) {
+  result_matrix[i_sim, 1] <- mean(rexp(10, rate = 1))
+  result_matrix[i_sim, 2] <- mean(rexp(100, rate = 1))
+  result_matrix[i_sim, 3] <- mean(rexp(1000, rate = 1))
+}
+```
+
+---
+
+# Report results 
+
+## Example: flipping coins 
+
+.pull-left[
+```{r, eval = FALSE}
+plot_df <- data.frame(coins = coins) 
+ggplot(plot_df, aes(x = coins)) + 
+  geom_histogram(bins = 6) + 
+  labs(x = "Number of heads", 
+       y = "Count") + 
+  ggtitle("Distribution of simulated 
+          number of heads") + 
+  theme_bw(base_size = 14) + 
+  theme(plot.title = 
+          element_text(hjust = 0.5))
+```
+]
+
+.pull-right[
+```{r, echo = FALSE}
+plot_df <- data.frame(coins = coins) 
+ggplot(plot_df, aes(x = coins)) + 
+  geom_histogram(bins = 6) + 
+  labs(x = "Number of heads", y = "Count") + 
+  ggtitle("Distribution of simulated number of heads") + 
+  theme_bw(base_size = 14) + 
+  theme(plot.title = element_text(hjust = 0.5))
+```
+]
+
+---
+
+# Report results 
+
+## Example: variance of sample mean 
+
+.pull-left[
+```{r, eval = FALSE}
+vars <- c(var(result_matrix[, 1]),
+          var(result_matrix[, 2]),
+          var(result_matrix[, 3]))
+plot_df <- 
+  data.frame(n = c(10, 100, 1000), 
+             var = vars) 
+ggplot(plot_df, aes(x = n, y = var)) + 
+  geom_point() + 
+  geom_line() + 
+  labs(x = "Sample size", 
+       y = "Variance of sample mean") + 
+  ggtitle("Simulated data from 
+          exponential distribution") + 
+  theme_bw(base_size = 14) + 
+  theme(plot.title = 
+          element_text(hjust = 0.5))
+```
+]
+
+.pull-right[
+```{r, echo = FALSE}
+plot_df <- data.frame(n = c(10, 100, 1000), 
+                      var = c(var(result_matrix[, 1]),
+                              var(result_matrix[, 2]),
+                              var(result_matrix[, 3]))) 
+ggplot(plot_df, aes(x = n, y = var)) + 
+  geom_point() + 
+  geom_line() + 
+  labs(x = "Sample size", y = "Variance of sample mean") + 
+  ggtitle("Simulated data from exponential distribution") + 
+  theme_bw(base_size = 14) + 
+  theme(plot.title = element_text(hjust = 0.5))
+```
+]
+
+---
+
+# Live coding example 
+
+Study the relationship between expected and observed variance for draws from a binomial distribution with sample sizes $n=10$ and $n=1000$. Consider the binomial distribution with $5$ trials and probabilities $p$ in the set $\{0.2, 0.4, 0.6, 0.8\}$. 
+

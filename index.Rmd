@@ -1,0 +1,80 @@
+---
+title: "STAT 302"
+description: |
+  Statistical Software and its Applications
+site: distill::distill_website
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+Materials for this course were originally developed by [Bryan Martin](https://bryandmartin.github.io/STAT302/index.html).
+
+# Schedule 
+
+### Week One 
+
+* **M 03/28**: Short lab 0 assigned
+* **W 03/30**: Short lab 0 due before class; Short lab 1 assigned
+
+### Week Two
+
+* **M 04/04**: Short lab 1 due before class; Lab 1 assigned 
+* **W 04/06**: Lab 2 assigned
+
+### Week Three
+
+* **M 04/11**: Lab 1 due before class
+* **W 04/13**: Lab 2 due before class, Project 1 assigned
+
+### Week Four
+
+* **M 04/18**: No new assignment
+* **W 04/20**: (optional) Short lab 2 assigned 
+
+### Week Five
+
+* **M 04/25**: Project 1 and (optional) Short lab 2 due before class; Short lab 3 assigned
+* **W 04/27**: Short lab 3 due before class; Lab 3 assigned
+
+### Week Six
+
+* **M 05/02**: No new assignment
+* **W 05/04**: Lab 3 due before class; Project 2 assigned
+
+### Week Seven
+
+* **M 05/09**: No new assignment
+* **W 05/11**: Short lab 4 assigned
+
+### Week Eight
+
+* **M 05/16**: Project 2 due by 11:59 PM; Short lab 5 assigned
+* **W 05/18**: Short lab 4 and Short lab 5 due before class; Lab 4 assigned
+
+### Week Nine
+
+* **M 05/23**: No new assignment
+* **W 05/25**: Lab 4 due before class (due date changed to 3:30 on 05/27); Project 3 assigned
+
+### Week Ten
+
+* **M 05/30**: No class
+* **W 06/01**: No new assignment
+
+### Finals Week 
+* **M 06/06**: Project 3 due at 11:59 PM
+
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+# Learn more about creating websites with Distill at:
+# https://rstudio.github.io/distill/website.html
+
+# Learn more about publishing to GitHub Pages at:
+# https://rstudio.github.io/distill/publish_website.html#github-pages
+
+```
+
