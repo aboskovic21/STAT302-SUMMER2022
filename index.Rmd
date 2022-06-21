@@ -14,56 +14,56 @@ Materials for this course were originally developed by [Bryan Martin](https://br
 
 ### Week One 
 
-* **M 03/28**: Short lab 0 assigned
-* **W 03/30**: Short lab 0 due before class; Short lab 1 assigned
+* **M 06/20**: No class - Juneteenth
+* **W 06/22**: Short lab 0 assigned
 
 ### Week Two
 
-* **M 04/04**: Short lab 1 due before class; Lab 1 assigned 
-* **W 04/06**: Lab 2 assigned
+* **M 06/27**: Short lab 0 due before class; Short Lab 1 assigned 
+* **W 06/29**: Short lab 1 due before class; Lab 1 assigned
 
 ### Week Three
 
-* **M 04/11**: Lab 1 due before class
-* **W 04/13**: Lab 2 due before class, Project 1 assigned
+* **M 07/04**: No class - July 4th
+* **W 07/06**: Lab 2 assigned
 
 ### Week Four
 
-* **M 04/18**: No new assignment
-* **W 04/20**: (optional) Short lab 2 assigned 
+* **M 07/11**: Lab 1 due before class
+* **W 07/13**: Lab 2 due before class, Project 1 assigned
 
 ### Week Five
 
-* **M 04/25**: Project 1 and (optional) Short lab 2 due before class; Short lab 3 assigned
-* **W 04/27**: Short lab 3 due before class; Lab 3 assigned
+* **M 07/18**: No new assignment
+* **W 07/20**: (optional/extra credit) Short lab 2 assigned
 
 ### Week Six
 
-* **M 05/02**: No new assignment
-* **W 05/04**: Lab 3 due before class; Project 2 assigned
+* **M 07/25**: Project 1 and (optional/extra credit) Short lab 2 due before class; Short lab 3 assigned
+* **W 07/27**: Short lab 3 due before class; Lab 3 assigned
 
 ### Week Seven
 
-* **M 05/09**: No new assignment
-* **W 05/11**: Short lab 4 assigned
+* **M 08/01**: No new assignment
+* **W 08/03**: Lab 3 due before class; Project 2 assigned
 
 ### Week Eight
 
-* **M 05/16**: Project 2 due by 11:59 PM; Short lab 5 assigned
-* **W 05/18**: Short lab 4 and Short lab 5 due before class; Lab 4 assigned
+* **M 08/08**: No new assignment
+* **W 08/10**: Short lab 4 assigned
 
 ### Week Nine
 
-* **M 05/23**: No new assignment
-* **W 05/25**: Lab 4 due before class (due date changed to 3:30 on 05/27); Project 3 assigned
+* **M 08/15**: Project 2 due by 11:59 PM; Short lab 5 assigned
+* **W 08/17**: Short lab 4 and Short lab 5 due before class; Lab 4 assigned
 
 ### Week Ten
 
-* **M 05/30**: No class
-* **W 06/01**: No new assignment
+* **M 05/30**: No new assignment
+* **W 06/01**: Lab 4 due before class; Project 3 assigned
 
 ### Finals Week 
-* **M 06/06**: Project 3 due at 11:59 PM
+* **M 08/19**: Project 3 due at 11:59 PM
 
 
 
