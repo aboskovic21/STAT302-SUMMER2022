@@ -90,7 +90,7 @@ Your final grade will be calculated as follows:
 In order to best accommodate everyone's choices for their safety during the pandemic, this will be a hybrid course. Feel free to come in person all the time, on some days, or never. I will never judge you for how you choose to engage in this course. My top priority is your learning, and if you feel safer, more comfortable, or learn more effectively by attending class on Zoom, please feel free to do so. All classes will be recorded and accessible under the Zoom tab on Canvas and by then accessing "Cloud Recordings." 
 
 ### Expectations
-  The COVID-19 pandemic has and will continue to present many of us with unforeseen difficulties. I encourage all of you to prioritize the health and safety of yourselves and those around you and would be happy to make accommodations that help you to do so. Please feel free to reach out to me via email at any point to discuss any concerns you may have about the course.
+The COVID-19 pandemic has and will continue to present many of us with unforeseen difficulties. I encourage all of you to prioritize the health and safety of yourselves and those around you and would be happy to make accommodations that help you to do so. Please feel free to reach out to me via email at any point to discuss any concerns you may have about the course.
 
 ### Keeping each other safe
 As we return to physical classrooms, please be respectful of your classmates’ boundaries and precautions. In addition, I hope we will all make every effort to keep ourselves and our classmates safe. If you test positive or are exposed to possible infection, I encourage you to err on the side of caution with regards to attending classes in-person, and I would be more than happy to make accommodations that allow you to do so.
@@ -107,7 +107,9 @@ If you do not have a personal computer, you can borrow one for free from UW thro
   I encourage and appreciate your feedback throughout the quarter. You are welcome to provide feedback on any aspect of the course at any time via email or in person. If you would prefer to do so confidentially, you can do so through the form [here](https://forms.gle/MiVUgmhwfHSDG8Fm8).
 
 ### Collaboration
-  On most assignments, collaboration is allowed and encouraged. You may discuss problems, approaches, and solutions with your classmates. Acceptable collaboration is limited to your classmates in this course and you must clearly include on any collaborative work the name(s) of anyone with whom you worked. Additionally, all submitted work must be your own; you should not submit code or answers copied from any resource including your classmates. Plagiarism and cheating is easy for us to detect and can lead to serious negative consequences for you (see Academic Integrity below). If you have any questions regarding this policy, please ask for clarification.
+On most assignments, collaboration is allowed and encouraged. You may discuss problems, approaches, and solutions with your classmates. Acceptable collaboration is limited to your classmates in this course and you must clearly include on any collaborative work the name(s) of anyone with whom you worked.
+
+Additionally, all submitted work must be your own; you should not submit code or answers copied from any resource including your classmates.  Plagiarism and cheating is easy for us to detect and can lead to serious negative consequences for you (see Academic Integrity below). If you have any questions regarding this policy, please ask for clarification.
 
 ### Discussion board
   You are encouraged to participate on the discussion board by posting questions about assignments and answering questions from other students. Posts may not include substantial amounts of code that can be used for a solution to any problem, but may include code snippets within reason. 
