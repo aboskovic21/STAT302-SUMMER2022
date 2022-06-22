@@ -27,7 +27,6 @@ library(kableExtra)
 
 ---
 
-
 # Outline
 
 1. Course Overview
@@ -37,7 +36,6 @@ library(kableExtra)
 5. R Basics
 6. Short Lab 0
 
-
 ---
 
 # Course Website 
@@ -45,6 +43,7 @@ library(kableExtra)
 .middler[.large[
 [Link to website](https://aboskovic21.github.io/STAT302-SUMMER2022/)
 ]]
+
 ---
 
 

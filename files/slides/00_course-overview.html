@@ -3,7 +3,8 @@
   <head>
     <title>STAT 302: Lecture 0</title>
     <meta charset="utf-8" />
-    <meta name="author" content="Sarah Teichman (adapted from slides by Bryan Martin and Peter Gao)" />
+    <meta name="author" content="Andrea Boskovic (adapted from slides by Sarah Teichman and Peter Gao)" />
+    <script src="00_course-overview_files/header-attrs/header-attrs.js"></script>
     <link href="00_course-overview_files/remark-css/default.css" rel="stylesheet" />
     <link rel="stylesheet" href="gao-theme.css" type="text/css" />
     <link rel="stylesheet" href="gao-theme-fonts.css" type="text/css" />
@@ -12,9 +13,15 @@
     <textarea id="source">
 class: center, title-slide
 
+.title[
 # STAT 302: Lecture 0
+]
+.subtitle[
 ## Course Overview
-### Sarah Teichman (adapted from slides by Bryan Martin and Peter Gao)
+]
+.author[
+### Andrea Boskovic (adapted from slides by Sarah Teichman and Peter Gao)
+]
 
 ---
 
@@ -23,16 +30,9 @@ class: center, title-slide
 
 # Introductions
 
-* What should we call you? (name &amp; pronouns)
-* Why are you taking this class?
-* One goal for this quarter
-
----
-
-# Today's pet picture 
-
-
-&lt;img src="../../files/images/pets/nut_mad.jpg" width="450px" style="display: block; margin: auto;" /&gt;
+* What should we call you? (name, pronouns, class year)
+* Fun fact or funny story
+* Favorite dessert or sweet
 
 ---
 
@@ -45,14 +45,14 @@ class: center, title-slide
 5. R Basics
 6. Short Lab 0
 
-
 ---
 
 # Course Website 
 
 .middler[.large[
-[Link to website](https://svteichman.github.io/STAT302-SPR2022)
+[Link to website](https://aboskovic21.github.io/STAT302-SUMMER2022/)
 ]]
+
 ---
 
 
@@ -62,6 +62,11 @@ class: center, title-slide
 * Questions about:
   * Course content 
   * Assignments
+  * Random stuff
+  
+.middler[.large[
+[Link to website](https://join.slack.com/t/stat302sum22/shared_invite/zt-1b7wwjv42-0pgfq~yvNPaIy24NFIIeHg)
+]]
 
 ---
 
@@ -1044,6 +1049,19 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
     deleted = true;
   });
 })();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
 (function() {
   "use strict"
   // Replace <script> tags in slides area to make them executable
