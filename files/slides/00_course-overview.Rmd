@@ -1,7 +1,7 @@
 ---
 title: "STAT 302: Lecture 0"
 subtitle: "Course Overview"
-author: "Sarah Teichman (adapted from slides by Bryan Martin and Peter Gao)"
+author: "Andrea Boskovic (adapted from slides by Sarah Teichman and Peter Gao)"
 date: ""
 output:
   xaringan::moon_reader:
@@ -21,20 +21,12 @@ library(kableExtra)
 
 # Introductions
 
-* What should we call you? (name & pronouns)
-* Why are you taking this class?
-* One goal for this quarter
+* What should we call you? (name, pronouns, class year)
+* Fun fact or funny story
+* Favorite dessert or sweet
 
 ---
 
-# Today's pet picture 
-
-
-```{r, echo = FALSE, out.width = "450px", fig.align = "center"}
-knitr::include_graphics("../../files/images/pets/nut_mad.jpg")
-```
-
----
 
 # Outline
 
@@ -51,7 +43,7 @@ knitr::include_graphics("../../files/images/pets/nut_mad.jpg")
 # Course Website 
 
 .middler[.large[
-[Link to website](https://svteichman.github.io/STAT302-SPR2022)
+[Link to website](https://aboskovic21.github.io/STAT302-SUMMER2022/)
 ]]
 ---
 
@@ -62,6 +54,11 @@ knitr::include_graphics("../../files/images/pets/nut_mad.jpg")
 * Questions about:
   * Course content 
   * Assignments
+  * Random stuff
+  
+.middler[.large[
+[Link to website](https://join.slack.com/t/stat302sum22/shared_invite/zt-1b7wwjv42-0pgfq~yvNPaIy24NFIIeHg)
+]]
 
 ---
 

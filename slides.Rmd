@@ -8,26 +8,26 @@ knitr::opts_chunk$set(echo = FALSE)
 
 * Lecture 00: Course Overview [[.html](files/slides/00_course-overview.html)] [[.Rmd](https://raw.githubusercontent.com/svteichman/STAT302-SPR2022/main/files/slides/00_course-overview.Rmd)]
 
-* Lecture 01: Introduction to R [[.html](files/slides/01_intro-to-R.html)] [[.Rmd](https://raw.githubusercontent.com/svteichman/STAT302-SPR2022/main/files/slides/01_intro-to-R.Rmd)]
+<!-- * Lecture 01: Introduction to R [[.html](files/slides/01_intro-to-R.html)] [[.Rmd](https://raw.githubusercontent.com/svteichman/STAT302-SPR2022/main/files/slides/01_intro-to-R.Rmd)] -->
 
-* Lecture 02: R Fundamentals [[.html](files/slides/02_fundamentals.html)] [[.Rmd](https://raw.githubusercontent.com/svteichman/STAT302-SPR2022/main/files/slides/02_fundamentals.Rmd)]
+<!-- * Lecture 02: R Fundamentals [[.html](files/slides/02_fundamentals.html)] [[.Rmd](https://raw.githubusercontent.com/svteichman/STAT302-SPR2022/main/files/slides/02_fundamentals.Rmd)] -->
 
-* Lecture 03: Data Visualization and Manipulation [[.html](files/slides/03_datavizmanip.html)] [[.Rmd](https://raw.githubusercontent.com/svteichman/STAT302-SPR2022/main/files/slides/03_datavizmanip.Rmd)]
+<!-- * Lecture 03: Data Visualization and Manipulation [[.html](files/slides/03_datavizmanip.html)] [[.Rmd](https://raw.githubusercontent.com/svteichman/STAT302-SPR2022/main/files/slides/03_datavizmanip.Rmd)] -->
 
-* Lecture 04: Strings, Factors, and Dates [[.html](files/slides/04_stringsfactors.html)] [[.Rmd](https://raw.githubusercontent.com/svteichman/STAT302-SPR2022/main/files/slides/04_stringsfactors.Rmd)]
+<!-- * Lecture 04: Strings, Factors, and Dates [[.html](files/slides/04_stringsfactors.html)] [[.Rmd](https://raw.githubusercontent.com/svteichman/STAT302-SPR2022/main/files/slides/04_stringsfactors.Rmd)] -->
 
-* Lecture 05: Multivariate Data and PCA [[.html](files/slides/05_pca.html)] [[.Rmd](https://raw.githubusercontent.com/svteichman/STAT302-SPR2022/main/files/slides/05_pca.Rmd)]
+<!-- * Lecture 05: Multivariate Data and PCA [[.html](files/slides/05_pca.html)] [[.Rmd](https://raw.githubusercontent.com/svteichman/STAT302-SPR2022/main/files/slides/05_pca.Rmd)] -->
 
-* Lecture 06: Regression and Inference [[.html](files/slides/06_inference.html)] [[.Rmd](https://raw.githubusercontent.com/svteichman/STAT302-SPR2022/main/files/slides/06_inference.Rmd)]
+<!-- * Lecture 06: Regression and Inference [[.html](files/slides/06_inference.html)] [[.Rmd](https://raw.githubusercontent.com/svteichman/STAT302-SPR2022/main/files/slides/06_inference.Rmd)] -->
 
-* Lecture 07: Simulation [[.html](files/slides/07_simulation.html)] [[.Rmd](https://raw.githubusercontent.com/svteichman/STAT302-SPR2022/main/files/slides/07_simulation.Rmd)]
-  * Lecture 07: Code Example [[.html](files/slides/07_simulation_example.html)] [[.Rmd](https://raw.githubusercontent.com/svteichman/STAT302-SPR2022/main/files/slides/07_simulation_example.Rmd)]
+<!-- * Lecture 07: Simulation [[.html](files/slides/07_simulation.html)] [[.Rmd](https://raw.githubusercontent.com/svteichman/STAT302-SPR2022/main/files/slides/07_simulation.Rmd)] -->
+<!--   * Lecture 07: Code Example [[.html](files/slides/07_simulation_example.html)] [[.Rmd](https://raw.githubusercontent.com/svteichman/STAT302-SPR2022/main/files/slides/07_simulation_example.Rmd)] -->
 
-* Lecture 08: Debugging and Git [[.html](files/slides/08_debuggit.html)] [[.Rmd](https://raw.githubusercontent.com/svteichman/STAT302-SPR2022/main/files/slides/08_debuggit.html)]
+<!-- * Lecture 08: Debugging and Git [[.html](files/slides/08_debuggit.html)] [[.Rmd](https://raw.githubusercontent.com/svteichman/STAT302-SPR2022/main/files/slides/08_debuggit.html)] -->
 
-* Lecture 09: Resampling [[.html](files/slides/09_resample-bayes.html)] [[.Rmd](https://raw.githubusercontent.com/svteichman/STAT302-SPR2022/main/files/slides/09_resample-bayes.html)]
+<!-- * Lecture 09: Resampling [[.html](files/slides/09_resample-bayes.html)] [[.Rmd](https://raw.githubusercontent.com/svteichman/STAT302-SPR2022/main/files/slides/09_resample-bayes.html)] -->
 
-* Lecture 10: Prediction [[.html](files/slides/10_prediction.html)] [[.Rmd](https://raw.githubusercontent.com/svteichman/STAT302-SPR2022/main/files/slides/10_prediction.html)]
+<!-- * Lecture 10: Prediction [[.html](files/slides/10_prediction.html)] [[.Rmd](https://raw.githubusercontent.com/svteichman/STAT302-SPR2022/main/files/slides/10_prediction.html)] -->
 
-* Lecture 11: R Package Development [[.html](files/slides/11_package.html)] [[.Rmd](https://raw.githubusercontent.com/svteichman/STAT302-SPR2022/main/files/slides/11_package.html)]
+<!-- * Lecture 11: R Package Development [[.html](files/slides/11_package.html)] [[.Rmd](https://raw.githubusercontent.com/svteichman/STAT302-SPR2022/main/files/slides/11_package.html)] -->
 
