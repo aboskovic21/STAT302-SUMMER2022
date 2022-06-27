@@ -148,7 +148,7 @@ Sharing recordings and other class materials outside of class that include perso
 
 # Links and other resources
 
-* [Canvas Page](https://canvas.uw.edu/courses/1519530)
+* [Canvas Page](https://canvas.uw.edu/courses/1588086)
 
 * [Install R](https://cran.r-project.org/)
 
