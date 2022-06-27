@@ -3,9 +3,11 @@
   <head>
     <title>STAT 302: Lecture 1</title>
     <meta charset="utf-8" />
-    <meta name="author" content="Sarah Teichman (adapted from slides by Bryan Martin and Peter Gao)" />
+    <meta name="author" content="Andrea Boskovic (adapted from slides by Sarah Teichman and Peter Gao)" />
+    <script src="01_intro-to-R_files/header-attrs/header-attrs.js"></script>
     <link href="01_intro-to-R_files/remark-css/default.css" rel="stylesheet" />
     <script src="01_intro-to-R_files/kePrint/kePrint.js"></script>
+    <link href="01_intro-to-R_files/lightable/lightable.css" rel="stylesheet" />
     <link rel="stylesheet" href="gao-theme.css" type="text/css" />
     <link rel="stylesheet" href="gao-theme-fonts.css" type="text/css" />
   </head>
@@ -13,23 +15,20 @@
     <textarea id="source">
 class: center, title-slide
 
+.title[
 # STAT 302: Lecture 1
+]
+.subtitle[
 ## Introduction to R
-### Sarah Teichman (adapted from slides by Bryan Martin and Peter Gao)
+]
+.author[
+### Andrea Boskovic (adapted from slides by Sarah Teichman and Peter Gao)
+]
 
 ---
 
 
 
-
-# Today's pet picture 
-
-
-&lt;img src="../../files/images/pets/joia_kittens.jpg" width="450px" style="display: block; margin: auto;" /&gt;
-
-Thanks to our grader, Joia 
-
----
 
 # Before class
 
@@ -97,7 +96,7 @@ What does the following code do? Does it raise any errors?
 
 
 ```r
-x &lt;- c("hello", "my", 30, NA, "students")
+x &lt;- c("hello", "my", 12, NA, "students")
 x[is.na(x)] &lt;- "beloved"
 print(x)
 cat(x)
@@ -107,11 +106,11 @@ cat(x)
 
 
 ```
-## [1] "hello"    "my"       "30"       "beloved"  "students"
+## [1] "hello"    "my"       "12"       "beloved"  "students"
 ```
 
 ```
-## hello my 30 beloved students
+## hello my 12 beloved students
 ```
 ---
 
@@ -850,15 +849,6 @@ is.matrix(real_small_mat)
 ```
 ## [1] TRUE
 ```
-
----
-
-## Today's pet picture 
-
-
-&lt;img src="../../files/images/pets/watermelon_cat.jpeg" width="500px" style="display: block; margin: auto;" /&gt;
-
-Thanks to Yuxuan!
 
 ---
 
@@ -1611,21 +1601,13 @@ We can use `str()` to see the structure of a data frame (or any other object!)
 
 ```r
 my_data2 &lt;- rbind(my_data, list(4, "d", FALSE, 0))
-```
-
-```
-## Warning in `[&lt;-.factor`(`*tmp*`, ri, value = "d"): invalid factor level, NA
-## generated
-```
-
-```r
 str(my_data2)
 ```
 
 ```
 ## 'data.frame':	4 obs. of  4 variables:
 ##  $ var1: num  1 2 3 4
-##  $ var2: Factor w/ 3 levels "a","b","c": 1 2 3 NA
+##  $ var2: chr  "a" "b" "c" "d"
 ##  $ var3: logi  TRUE FALSE TRUE FALSE
 ##  $ var4: num  3 2 1 0
 ```
@@ -1671,7 +1653,7 @@ my_data2
 ## Obs1    1    a  TRUE    3
 ## Obs2    2    b FALSE    2
 ## Obs3    3    c  TRUE    1
-## Obs4    4 &lt;NA&gt; FALSE    0
+## Obs4    4    d FALSE    0
 ```
 ---
 layout: false
@@ -2003,6 +1985,19 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
     deleted = true;
   });
 })();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
 (function() {
   "use strict"
   // Replace <script> tags in slides area to make them executable

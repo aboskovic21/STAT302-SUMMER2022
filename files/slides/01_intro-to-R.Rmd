@@ -1,7 +1,7 @@
 ---
 title: "STAT 302: Lecture 1"
 subtitle: "Introduction to R"
-author: "Sarah Teichman (adapted from slides by Bryan Martin and Peter Gao)"
+author: "Andrea Boskovic (adapted from slides by Sarah Teichman and Peter Gao)"
 date: ""
 output:
   xaringan::moon_reader:
@@ -18,17 +18,6 @@ options(htmltools.dir.version = FALSE)
 knitr::opts_chunk$set(comment = "##")
 library(kableExtra)
 ```
-
-# Today's pet picture 
-
-
-```{r, echo = FALSE, out.width = "450px", fig.align = "center"}
-knitr::include_graphics("../../files/images/pets/joia_kittens.jpg")
-```
-
-Thanks to our grader, Joia 
-
----
 
 # Before class
 
@@ -70,7 +59,7 @@ From R Documentation:
 What does the following code do? Does it raise any errors? 
 
 ```{r, eval = FALSE}
-x <- c("hello", "my", 30, NA, "students")
+x <- c("hello", "my", 12, NA, "students")
 x[is.na(x)] <- "beloved"
 print(x)
 cat(x)
@@ -79,7 +68,7 @@ cat(x)
 --
 
 ```{r, eval = TRUE, echo = F}
-x <- c("hello", "my", 30, NA, "students")
+x <- c("hello", "my", 12, NA, "students")
 x[is.na(x)] <- "beloved"
 print(x)
 cat(x)
@@ -513,17 +502,6 @@ R automatically coerces it into a vector. We can prevent this by including `drop
 real_small_mat <- my_matrix[, -c(1, 3, 4, 5), drop = FALSE]
 is.matrix(real_small_mat)
 ```
-
----
-
-## Today's pet picture 
-
-
-```{r, echo = FALSE, out.width = "500px", fig.align = "center"}
-knitr::include_graphics("../../files/images/pets/watermelon_cat.jpeg")
-```
-
-Thanks to Yuxuan!
 
 ---
 
