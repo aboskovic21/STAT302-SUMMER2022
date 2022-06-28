@@ -19,8 +19,8 @@ Materials for this course were originally developed by [Bryan Martin](https://br
 
 ### Week Two
 
-* **M 06/27**: Short lab 0 due before class; Short Lab 1 assigned 
-* **W 06/29**: Short lab 1 due before class; Lab 1 assigned
+* **M 06/27**: Short lab 0 due at 11:59 PM; Short Lab 1 assigned 
+* **W 06/29**: Short lab 1 due at 11:59 PM; Lab 1 assigned
 
 ### Week Three
 
@@ -29,8 +29,8 @@ Materials for this course were originally developed by [Bryan Martin](https://br
 
 ### Week Four
 
-* **M 07/11**: Lab 1 due before class
-* **W 07/13**: Lab 2 due before class, Project 1 assigned
+* **M 07/11**: Lab 1 due at 11:59 PM
+* **W 07/13**: Lab 2 due at 11:59 PM, Project 1 assigned
 
 ### Week Five
 
@@ -40,31 +40,23 @@ Materials for this course were originally developed by [Bryan Martin](https://br
 ### Week Six
 
 * **M 07/25**: Project 1 and (optional/extra credit) Short lab 2 due at 11:59 PM; Short lab 3 assigned
-* **W 07/27**: Short lab 3 due before class; Lab 3 assigned
+* **W 07/27**: Short lab 3 due at 11:59 PM; Lab 3 assigned
 
 ### Week Seven
 
-* **M 08/01**: No new assignment
-* **W 08/03**: Lab 3 due before class; Project 2 assigned
+* **M 08/01**: Lab 3 due at 11:59 PM; Project 2 assigned
+* **W 08/03**: Short lab 4 assigned
 
 ### Week Eight
 
-* **M 08/08**: No new assignment
-* **W 08/10**: Short lab 4 assigned
+* **M 08/08**: Short lab 4 due at 11:59 PM; Short lab 5 assigned
+* **W 08/10**: Short lab 5 due at 11:59 PM; Project 2 due by 11:59 PM; Project 3 assigned; (optional) Lab 4 assigned
 
 ### Week Nine
 
-* **M 08/15**: Project 2 due by 11:59 PM; Short lab 5 assigned
-* **W 08/17**: Short lab 4 and Short lab 5 due before class; Lab 4 assigned
-
-### Week Ten
-
-* **M 05/30**: No new assignment
-* **W 06/01**: Lab 4 due before class; Project 3 assigned
-
-### Finals Week 
-* **M 08/19**: Project 3 due at 11:59 PM
-
+* **M 08/15**: No new assignment
+* **W 08/17**: No new assignment
+* **F 08/19**: Project 3 due at 11:59 PM; (optional) Lab 4 due at 11:59 PM
 
 
 ```{r setup, include=FALSE}
