@@ -17,4 +17,6 @@ navbar:
       href: short_labs.html
     - text: "Projects"
       href: projects.html
+    - text: "Class Notes"
+      href: class_notes.html
 output: distill::distill_article

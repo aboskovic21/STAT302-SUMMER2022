@@ -1,0 +1,80 @@
+---
+title: "Lecture 2"
+author: "Andrea Boskovic"
+date: '2022-06-27'
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(palmerpenguins)
+library(haven)
+```
+
+```{r}
+data(penguins)
+```
+
+```{r}
+x <- 7
+x + 3
+x == 7
+x > 7
+typeof(x)
+```
+
+```{r}
+v <- "hello"
+typeof(v)
+v <- 1
+typeof(v)
+v <- as.integer(1)
+typeof(v)
+```
+
+```{r}
+getwd()
+#hibbs <- read.table('hibbs.dat', header = TRUE)
+#setwd() is complicated 
+```
+
+Session -> Set Working Directory -> To Source File Location makes your life easy!
+
+```{r}
+rep(5)
+rep(5, 5)
+rep(c(1, 2, 3), 5)
+```
+
+```{r}
+x <- seq(from = 1, to = 50, by = 2)
+x[3] # third element of x
+x[-3]
+```
+
+```{r}
+x <- 1:5
+y <- -5:-1
+```
+
+```{r}
+x + y
+x*y
+```
+
+```{r}
+my_vec <- c(1, 2, 3)
+names(my_vec) <- c("a", "b", "c")
+```
+
+```{r}
+my_matrix <- matrix(c(x, y), nrow = 2, ncol = 5, byrow = TRUE)
+my_matrix[ , c(1, 2)]
+
+small_mat <- my_matrix[, -c(1, 3, 4, 5)]
+is.matrix(small_mat)
+
+real_small_mat <- my_matrix[, -c(1, 3, 4, 5), drop = FALSE]
+is.matrix(real_small_mat)
+```
+

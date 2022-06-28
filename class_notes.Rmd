@@ -1,0 +1,19 @@
+---
+title: "Class Notes"
+description: "Miscellaneous notes from lectures and other things that might be useful!"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Cheatsheets
+
+### RMarkdown
+[[.pdf](files/class-notes/cheatsheets/rmarkdown-cheatsheet.pdf)]
+
+## Lectures
+
+### Lecture 2
+[[.pdf](files/class-notes/lecture 2/lecture2.pdf)] [[.Rmd](files/class-notes/lecture 2/lecture2.Rmd)]
+[[iPad Notes](files/class-notes/lecture 2/Lecture 2 Notes.pdf)]
