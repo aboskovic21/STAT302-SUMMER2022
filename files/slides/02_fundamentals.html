@@ -3,7 +3,8 @@
   <head>
     <title>STAT 302, Lecture Slides 2</title>
     <meta charset="utf-8" />
-    <meta name="author" content="Sarah Teichman (adapted from slides by Bryan Martin and Peter Gao)" />
+    <meta name="author" content="Andrea Boskovic (adapted from slides by Sarah Teichman and Peter Gao)" />
+    <script src="02_fundamentals_files/header-attrs/header-attrs.js"></script>
     <link href="02_fundamentals_files/remark-css/default.css" rel="stylesheet" />
     <script src="02_fundamentals_files/kePrint/kePrint.js"></script>
     <link href="02_fundamentals_files/lightable/lightable.css" rel="stylesheet" />
@@ -14,23 +15,19 @@
     <textarea id="source">
 class: center, title-slide
 
+.title[
 # STAT 302, Lecture Slides 2
+]
+.subtitle[
 ## Programming Fundamentals
-### Sarah Teichman (adapted from slides by Bryan Martin and Peter Gao)
+]
+.author[
+### Andrea Boskovic (adapted from slides by Sarah Teichman and Peter Gao)
+]
 
 ---
 
 
-
-
-# Today's pet picture 
-
-
-&lt;img src="../../files/images/pets/dog_raphie.jpeg" width="350px" style="display: block; margin: auto;" /&gt;
-
-Thanks Raphie!
-
----
 
 
 # Outline
@@ -754,17 +751,6 @@ my_sum(1:5)
 ## [1] 15
 ```
 
----
-
-## Today's pet picture 
-
-
-&lt;img src="../../files/images/pets/tiny_kitten.jpeg" width="350px" style="display: block; margin: auto;" /&gt;
-
-Thanks Mingfei!
-
----
-
 
 layout: false
 class: inverse
@@ -1181,7 +1167,7 @@ my_tibble
 ```
 ## # A tibble: 3 × 4
 ##   Observation  var1 var2  var3 
-##   &lt;chr&gt;       &lt;int&gt; &lt;fct&gt; &lt;lgl&gt;
+##   &lt;chr&gt;       &lt;int&gt; &lt;chr&gt; &lt;lgl&gt;
 ## 1 obs1            1 a     TRUE 
 ## 2 obs2            2 b     FALSE
 ## 3 obs3            3 c     TRUE
@@ -1504,8 +1490,8 @@ Another example:
 ## 16 Other F…      20        33        40        46        49        63         46
 ## 17 Other W…       5         2         3         4         2         7          3
 ## 18 Unaffil…     217       299       374       365       341       528        407
-## # … with 3 more variables: $100-150k &lt;dbl&gt;, &gt;150k &lt;dbl&gt;,
-## #   Don't know/refused &lt;dbl&gt;
+## # … with 3 more variables: `$100-150k` &lt;dbl&gt;, `&gt;150k` &lt;dbl&gt;,
+## #   `Don't know/refused` &lt;dbl&gt;
 ```
 
 
@@ -1562,7 +1548,7 @@ getwd()
 ```
 
 ```
-## [1] "/Users/sarahteichman/Documents/UW/302/STAT302-SPR2022/files/slides"
+## [1] "/Users/andreaboskovic/Desktop/teaching/STAT302-SUMMER2022/files/slides"
 ```
 
 This location is where R will look by default!
@@ -1586,7 +1572,7 @@ getwd()
 ```
 
 ```
-## [1] "/Users/sarahteichman/Documents/UW/302/STAT302-SPR2022/files/slides"
+## [1] "/Users/andreaboskovic/Desktop/teaching/STAT302-SUMMER2022/files/slides"
 ```
 
 ```r
@@ -1595,7 +1581,7 @@ getwd()
 ```
 
 ```
-## [1] "/Users/sarahteichman/Documents/UW/302/STAT302-SPR2022/files"
+## [1] "/Users/andreaboskovic/Desktop/teaching/STAT302-SUMMER2022/files"
 ```
 
 ---
@@ -1728,6 +1714,8 @@ helping with reproducibility.
 * Helps with reproducibility. You can share R project files and the project will load on other computer exactly as it does on yours.
 * Helps keep your separate analyses separate. For example, you won't need to worry if you defined a variable `x` in multiple different analyses
 * Easy to integrate with version control such as git (more on this later!)
+
+
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
@@ -1775,6 +1763,19 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
     deleted = true;
   });
 })();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
 (function() {
   "use strict"
   // Replace <script> tags in slides area to make them executable

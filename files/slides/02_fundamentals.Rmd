@@ -1,7 +1,7 @@
 ---
 title: "STAT 302, Lecture Slides 2"
 subtitle: "Programming Fundamentals"
-author: "Sarah Teichman (adapted from slides by Bryan Martin and Peter Gao)"
+author: "Andrea Boskovic (adapted from slides by Sarah Teichman and Peter Gao)"
 date: ""
 output:
   xaringan::moon_reader:
@@ -18,18 +18,6 @@ options(htmltools.dir.version = FALSE)
 knitr::opts_chunk$set(comment = "##")
 library(kableExtra)
 ```
-
-# Today's pet picture 
-
-
-```{r, echo = FALSE, out.width = "350px", fig.align = "center"}
-knitr::include_graphics("../../files/images/pets/dog_raphie.jpeg")
-```
-
-Thanks Raphie!
-
----
-
 
 # Outline
 
@@ -561,19 +549,6 @@ my_sum <- function(x, starting_sum = 0) {
 }
 my_sum(1:5)
 ```
-
----
-
-## Today's pet picture 
-
-
-```{r, echo = FALSE, out.width = "350px", fig.align = "center"}
-knitr::include_graphics("../../files/images/pets/tiny_kitten.jpeg")
-```
-
-Thanks Mingfei!
-
----
 
 
 layout: false
