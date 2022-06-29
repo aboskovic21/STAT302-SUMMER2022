@@ -7,7 +7,7 @@ description: "Miscellaneous notes from lectures and other things that might be u
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-## Cheatsheets
+## Misc. Resources
 
 ### RMarkdown
 [[.pdf](files/class-notes/cheatsheets/rmarkdown-cheatsheet.pdf)]
@@ -17,3 +17,7 @@ knitr::opts_chunk$set(echo = FALSE)
 ### Lecture 2
 [[.pdf](files/class-notes/lecture 2/lecture2.pdf)] [[.Rmd](files/class-notes/lecture 2/lecture2.Rmd)]
 [[iPad Notes](files/class-notes/lecture 2/Lecture 2 Notes.pdf)]
+
+### Lecture 3
+[[.pdf](files/class-notes/lecture 3/lecture3.pdf)] [[.Rmd](files/class-notes/lecture 3/lecture3.Rmd)]
+

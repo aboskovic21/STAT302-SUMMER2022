@@ -1,0 +1,188 @@
+---
+title: "Lecture 3"
+author: "Andrea Boskovic"
+date: '2022-06-29'
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+```
+
+# Reminders
+
+1. Short lab 1 due at 11:59 PM tonight
+2. Lab 1 will be open at 3PM today and due on 07/11 at 11:59 PM
+3. No class on Monday (Happy Fourth of July!)
+4. My OH are tomorrow 8-9 AM on Zoom
+
+# Back to Lecture 1
+
+## How do you make a table/make it look nice in R?
+
+```{r}
+# install.packages("knitr")
+# install.packages("kableExtra")
+library(knitr)
+library(kableExtra)
+```
+
+```{r}
+my_matrix <- diag(3)
+my_matrix
+
+rownames(my_matrix) <- c("First Row", "Second Row", "Third Row")
+colnames(my_matrix) <- c("Column 1", "Column 2", "Column 3")
+```
+
+```{r}
+kable_styling(kable(my_matrix))
+my_matrix
+```
+
+The `kableExtra` package is a really useful tool for making tables and will be useful in your projects.
+
+Look how much nicer the `kableExtra` output is than just printing `my_matrix`. 
+
+Here's a link to explore what else this package can do: https://cran.r-project.org/web/packages/kableExtra/vignettes/awesome_table_in_html.html
+
+## Lists
+
+```{r}
+my_list <- list("some_numbers" = 1:5,
+                "some_characters" = c("a", "b", "c"),
+                "a_matrix" = diag(2))
+my_list
+```
+
+**Important**: In R, the dollar sign ($) is used to refer to list items AND to column names.
+
+### Accessing list elements
+
+```{r}
+# You can access list elements in three different ways
+my_list$some_numbers
+my_list[["some_numbers"]]
+my_list[[1]]
+```
+
+### How do you subset a list?
+
+Subsetting a list means accessing just part of it. Our whole list is the contents of my_list:
+
+```{r}
+my_list
+```
+
+But what if I only want to see `some_numbers` and `a_matrix`? How do I do that? This is called *subsetting*.
+
+```{r}
+my_list[c(1,3)]
+my_list[c("some_numbers", "a_matrix")]
+```
+
+**Solution**: Make a vector of the list element positions that you want or the list element names.
+
+### Adding to a list
+
+What if I want to add another element to `my_matrix`?
+
+```{r}
+my_list$STAT302 <- "my favorite class"
+my_list$good_question <- c(1, "jack", TRUE, 5000)
+```
+
+You can access the names of all your list elements with 
+
+```{r}
+names(my_list)
+```
+
+## Data Frames
+
+```{r}
+my_data <- data.frame("var1" = 1:3,
+                      "var2" = c("a", "b", "c"),
+                      "var3" = c(TRUE, FALSE, TRUE))
+my_data
+kable_styling(kable(my_data))
+```
+
+```{r}
+my_matrix
+my_matrix2 <- as.data.frame(my_matrix)
+#typeof(my_matrix)
+#typeof(my_matrix2)
+```
+
+### Subsetting Data Frames
+
+```{r}
+# Accessing a column
+my_data$var1
+my_data[c("var1", "var2")]
+
+# Things can get fishy depending on how you try to extract a column
+my_data["var1"]
+my_data$var1
+my_data[["var1"]]
+```
+
+### Adding a column
+
+```{r}
+my_data$STAT302 <- c("coding", "is", "fun")
+#my_data$test <- c(1, 2, 3, 4) 
+```
+
+```{r}
+# Preview into the tidyverse
+my_data <- my_data %>%
+  mutate(var1x2 = var1*2)
+```
+
+### Add row names
+
+```{r}
+rownames(my_data) <- c("Obs 1", "Obs 2", "Obs 3")
+kable_styling(kable(my_data))
+```
+
+## Coding Style
+
+```{r}
+# my_data %>%
+#   filter(var1 > 1) %>%
+#   mutate(var1x3 = var1 * 3) %>%
+#   group_by()
+```
+
+Addins -> Styler -> Style Selection is a really useful tool to make your code look pretty!
+
+```{r}
+AddValues <- function(x, y) {
+  z <- 4
+  return(x + y)
+  z
+}
+AddValues(x = 5, y = 3)
+```
+
+Always use return!! Try taking it out in the previous chunk and see what happens!
+
+```{r}
+#first_day_of_the_month<-sdkfjdaaajjjjjjjjjjjjjjjjjjjasdoifjavdoifbjoisjdfoiajsdiovajadfjhakjsdc
+```
+
+Be careful of the margins!
+
+```{r}
+a <- 2; b <- 3 # bad practice
+
+
+# good practice
+a <- 2
+b <- 3
+```
+
