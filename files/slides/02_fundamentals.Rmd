@@ -1105,12 +1105,12 @@ This location is where R will look by default!
 
 ---
 
-## Changing your working directory
+## Changing your working directory: the hard way
 
 You can change your working directory using `setwd()`. 
 
 ```{r, eval = FALSE}
-setwd("/Users/Sarah/Documents")
+setwd("/path/to/correct/folder")
 ```
 
 You can use the shorthand `..` to reference a parent directory relative to where you are now.
@@ -1123,12 +1123,24 @@ getwd()
 
 ---
 
+## Changing your working directory: the easy way
+
+If you move your mouse to the top of your screen, click
+
+*Session* -> *Set Working Directory* -> *To Source File Location*
+
+This tells R to "look" in the directory where your current file is! It works like magic and fixes most (if not all) common directory problems you'll run into. 
+
+Workflow recap: When you open up your computer to work on a homework, lab, project, etc., the first thing you should do after making or finding your file is to run *Session* -> *Set Working Directory* -> *To Source File Location*!
+
+---
+
 ## Working directories and R Markdown
 
 Do not change your working directory inside R Markdown files! 
 By default, R Markdown sets the filepath they are in as the working directory. 
 
-Changing this can (will) mess up your analysis, and make your work less reproducible.
+Changing this can (read: will) mess up your analysis, and make your work less reproducible.
 
 ---
 

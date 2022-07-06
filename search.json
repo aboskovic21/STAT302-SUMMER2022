@@ -29,8 +29,8 @@
       "title": "Labs",
       "description": "",
       "author": [],
-      "contents": "\nLab 1:\nWorking with vectors and matrices [.html] [.Rmd]\n\n\n\n\n\n\n",
-      "last_modified": "2022-06-23T07:39:45-07:00"
+      "contents": "\nLab 1:\nWorking with vectors and matrices [.html] [.Rmd]\nLab 2: Functions,\nlists, and data [.html]\n[.Rmd]\n\n\n\n\n\n",
+      "last_modified": "2022-07-05T22:15:12-07:00"
     },
     {
       "path": "projects.html",
@@ -52,8 +52,8 @@
       "path": "slides.html",
       "title": "Lecture Slides",
       "author": [],
-      "contents": "\nLecture 00: Course Overview [.html] [.Rmd]\nLecture 01: Introduction to R [.html] [.Rmd]\nLecture 02: R Fundamentals [.html] [.Rmd]\n\n\n\n",
-      "last_modified": "2022-06-29T09:56:18-07:00"
+      "contents": "\nLecture 00: Course Overview [.html] [.Rmd]\nLecture 01: Introduction to R [.html] [.Rmd]\nLecture 02: R Fundamentals [.html] [.Rmd]\nLecture 03: Data Visualization and Manipulation [.html] [.Rmd]\n\n\n\n",
+      "last_modified": "2022-07-05T22:14:59-07:00"
     },
     {
       "path": "syllabus.html",
