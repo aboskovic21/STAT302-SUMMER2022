@@ -25,16 +25,16 @@ Materials for this course were originally developed by [Bryan Martin](https://br
 ### Week Three
 
 * **M 07/04**: No class - July 4th
-* **W 07/06**: Lab 2 assigned
+* **W 07/06**: No new assignment
 
 ### Week Four
 
-* **M 07/11**: Lab 1 due at 11:59 PM
-* **W 07/13**: Lab 2 due at 11:59 PM, Project 1 assigned
+* **M 07/11**: Lab 2 assigned; Lab 1 due at 11:59 PM
+* **W 07/13**: Project 1 assigned
 
 ### Week Five
 
-* **M 07/18**: No new assignment
+* **M 07/18**: Lab 2 due at 11:59 PM
 * **W 07/20**: (optional/extra credit) Short lab 2 assigned
 
 ### Week Six
