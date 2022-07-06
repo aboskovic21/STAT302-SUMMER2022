@@ -21,3 +21,6 @@ knitr::opts_chunk$set(echo = FALSE)
 ### Lecture 3
 [[.pdf](files/class-notes/lecture 3/lecture3.pdf)] [[.Rmd](files/class-notes/lecture 3/lecture3.Rmd)]
 
+### Lecture 4
+[[.pdf](files/class-notes/lecture 4/lecture4.pdf)] [[.Rmd](files/class-notes/lecture 4/lecture4.Rmd)]
+

@@ -51,9 +51,12 @@ As usual, all code below should follow the style guidelines from the lecture sli
 
 ## Part 2. Loops (4 points)
 
-**2.** (4 points) Define a function that loops through each element of a matrix and replaces each element with the row index minus the column index. Create a matrix and demonstrate the use of this function on your matrix.
+**2.** (4 points) Draw 100 values from a $N(2, 5)$ distribution (hint: use `rnorm()`). Create a `for` loop that goes through all the values in the sample and standardizes them. Make a histogram of the resulting distribution.
 
-*Hint: use the functions `ncol()` and `nrow()` to find the number of columns and number of rows in your matrix input.*
+Recall: A value $z$ is standardized if:
+
+$$z = \frac{x-\mu}{\sigma},$$
+where $\mu$ and $\sigma$ are the mean and standard deviation of the (original) distribution, respectively.
 
 
 ## Part 3. More on Functions (8 points)
