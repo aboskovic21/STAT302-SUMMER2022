@@ -22,17 +22,6 @@ knitr::opts_chunk$set(cache = TRUE)
 library(kableExtra)
 ```
 
-# Today's pet picture 
-
-
-```{r, echo = FALSE, out.width = "250px", fig.align = "center"}
-knitr::include_graphics("../../files/images/pets/sansa.jpeg")
-```
-
-Thanks Pranav!
-
----
-
 # Outline
 
 1. Introduction to tidyverse
@@ -1349,17 +1338,6 @@ ggplot(gapminder, aes(x = continent, fill = lifeExpCat)) +
   * Scatterplot or line plot colored by category 
   * Scatterplot or line plot faceted by category
   * Many possibilities! See slides 17-40! 
-
----
-
-# Today's pet picture 
-
-
-```{r, echo = FALSE, out.width = "600px", fig.align = "center"}
-knitr::include_graphics("../../files/images/pets/Macie_and_Bluto.jpeg")
-```
-
-Thanks Moira!
 
 ---
 
