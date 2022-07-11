@@ -58,7 +58,7 @@ Recall: A value $z$ is standardized if:
 $$z = \frac{x-\mu}{\sigma},$$
 where $\mu$ and $\sigma$ are the mean and standard deviation of the (original) distribution, respectively.
 
-
+ 
 ## Part 3. More on Functions (8 points)
 
 **3a.** (3 points) The hard-threshold function is defined as 
