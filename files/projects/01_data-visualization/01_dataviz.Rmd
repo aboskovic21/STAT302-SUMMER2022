@@ -1,7 +1,7 @@
 ---
 title: "Project 1: Data Exploration and Visualization"
 author: "Project instructions"
-date: "Due on 04/25"
+date: "Due on 07/25 @ 11:59 PM"
 output: html_document
 ---
 
