@@ -9,7 +9,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Misc. Resources
 
-### RMarkdown
+### RMarkdown Cheatsheet
 [[.pdf](files/class-notes/cheatsheets/rmarkdown-cheatsheet.pdf)]
 
 ## Lectures
@@ -23,4 +23,13 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ### Lecture 4
 [[.pdf](files/class-notes/lecture 4/lecture4.pdf)] [[.Rmd](files/class-notes/lecture 4/lecture4.Rmd)]
+
+### Lecture 5
+[[.html](files/class-notes/lecture 5/lecture5.html)] [[.Rmd](files/class-notes/lecture 5/lecture5.Rmd)]
+
+### Lecture 6
+[[.html](files/class-notes/lecture 6/lecture6.html)] [[.Rmd](files/class-notes/lecture 6/lecture6.Rmd)]
+
+### Lecture 7
+[[.html](files/class-notes/lecture 7/lecture7.html)] [[.Rmd](files/class-notes/lecture 7/lecture7.Rmd)]
 

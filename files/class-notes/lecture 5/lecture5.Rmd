@@ -1,0 +1,84 @@
+---
+title: "Lecture 5"
+author: "Andrea Boskovic"
+date: '2022-07-11'
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Reminders
+
+1. Lab 2 will be assigned today (officially)
+2. Lab 1 is due tonight 11:59 PM
+3. Later this week (Wednesday): Project 1 will be assigned
+
+# Introduction to the tidyverse
+
+```{r}
+#install.packages('tidyverse')
+library(tidyverse)
+```
+
+For conflicts, be sure to specify which package the function comes from.
+
+```{r}
+# dplyr::select()
+```
+
+## Pipes
+
+```{r}
+library(gapminder)
+data(gapminder)
+
+head(gapminder, n = 10)
+
+## This is hard to read and can get confusing really fast
+mean(log(gapminder$pop))
+
+## This is a better, "tidier" way of doing that
+gapminder$pop %>%
+  log() %>%
+  mean()
+```
+
+## Filtering data
+
+```{r}
+bosnia_1980 <- gapminder %>%
+  filter(country == "Bosnia and Herzegovina", year >= 1980)
+
+bosnia_1980
+```
+
+# Data visualization
+
+```{r}
+# gapminder %>%
+#   filter(country == "Africa") %>%
+lifeExp_plot <- ggplot(data = gapminder, aes(x = year, y = lifeExp, 
+                             group = country, 
+                             color = continent)) + 
+  geom_line(size = 0.75) +
+  geom_smooth(aes(group = continent), 
+              se = FALSE, color = "black",
+              size = 1.5) + 
+  facet_wrap(~ continent) +
+  labs(x = "Year", y = "Life Expectancy (years)",
+       title = "Life Expectancy over Time by Continent",
+       color = "Continent") +
+  theme_bw() + 
+  theme(plot.title = element_text(hjust = 0.5, face = "bold", size = 14),
+        legend.position = "none",
+        axis.text.x = element_text(angle = 45, hjust = 1, vjust = 1),
+        panel.spacing.x = unit(0.75, "cm"))
+
+lifeExp_plot
+
+# Don't screenshot!
+ggsave("lifeExp_plot.pdf", plot = lifeExp_plot, height = 5, width = 7)
+```
+

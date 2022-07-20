@@ -1,0 +1,175 @@
+---
+title: "Lecture 7"
+author: "Andrea Boskovic"
+date: '2022-07-18'
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(gapminder)
+```
+
+# Reminders
+
+1. Lab 2 due tonight at 11:59 PM - let me know if you need an extension
+2. Short lab 2 (optional/extra credit) will be assigned probably tonight
+3. No class Wednesday 07/20
+4. Office Hours this week:
+      * 07/19 @ 1-2PM and 3-4PM
+      * 07/21 @ 8-9AM
+5. You should be working on Project 1 (due 1 week from today - 07/25 at 11:59 PM)
+
+# Data Manipulation (end of Lecture 3)
+
+Tidyverse loads a bunch of useful packages. One of them, the most important for data manipulation, is `dplyr`.
+
+`dplyr` contains a few functions that are going to allow you to manipulate data.
+
+The main important ones are:
+
+1. `head()` and `tail()`: first and last observations in a dataset, respectively
+2. `filter()`: allows you to select *rows* of a dataset
+3. `select()`: allows you to select *columns* of a dataset
+4. `mutate()`: allows you to make new columns based on existing columns
+5. `group_by()` and `summarize()`: these are almost always used together. `group_by()` lets you choose a variable to group by and summarize calculates something for each category/group you chose.
+
+Let's do some examples with the Gapminder dataset
+
+```{r}
+data(gapminder)
+```
+
+1. `head()` and `tail()`
+
+Let's say I want to see the beginning and end of the dataset
+
+```{r}
+# gets you first 10 obs
+head(gapminder, n = 10)
+gapminder %>%
+  head(n = 10)
+
+# gets you last 10 obs
+tail(gapminder, n = 10)
+gapminder %>%
+  tail(n = 10)
+```
+
+### Add in ordering
+
+Suppose I want to order the dataset by countries with the highest life expectancy. A function that can do that is called `arrange()`. By default, it goes in ascending order of the variable you "arrange" by. If you want the other way (descending order), you can use `arrange()` and `desc()` together. 
+
+```{r}
+# better solution
+gapminder %>%
+  arrange(desc(lifeExp)) %>%
+  head(n = 10)
+
+# okay solution
+gapminder %>%
+  arrange(lifeExp) %>%
+  tail(n = 10)
+```
+
+2. `filter()`
+
+`filter()` basically lets us choose a range or a value for a variable, and takes out observations from the data that don't fit the criteria we give it. Think of it as "give me observations where ____ is true."
+
+```{r}
+# rows where country is Afghanistan
+gapminder %>%
+  filter(country == "Afghanistan")
+
+# rows where year is between 2000 and 2015
+gapminder %>%
+  filter(year <= 2015, year >= 2000)
+
+# you can filter on multiple different columns and separate with a comma
+gapminder %>%
+  filter(year <= 2015, year >= 2000,
+         country == "Albania")
+
+# you can look for a bunch of different countries
+three_countries <- gapminder %>%
+  filter(country %in% c("China", "Poland", "Algeria"))
+three_countries
+```
+
+3. `select()` 
+
+This lets you pair down your data by choosing columns that you want to see.
+
+Suppose I want to show someone, in a table, Algeria's life expectancy over time.
+
+```{r}
+gapminder %>%
+  filter(country == "Algeria") %>%
+  select(lifeExp, year)
+```
+
+Sometimes, `select()` might not work because it's also part of another package (so you might have a conflict). In these cases, Google will tell you what to do, and the solution it'll give you is to instead use `dplyr::select()`.
+
+### How are `select()` and `filter()` different?
+
+Summary: 
+
+* `select()` pairs down columns, but does not affect rows
+* `filter()` pairs down rows, but does not affect columns
+
+```{r}
+gapminder %>% 
+  select(country, year, pop)
+
+gapminder %>%
+  filter(gdpPercap > 750)
+```
+
+4. `mutate()`
+
+`mutate()` lets you make new columns or change existing columns based on information from your data.
+
+Let's say I'm interested in categorizing life expectancy into "low", "medium" and "high."
+
+We'll say a life expectancy below 48 is low, 49-70 is medium, and above 71 is high.
+
+```{r}
+gapminder <- gapminder %>%
+  mutate(exp_category = case_when(lifeExp <= 48 ~ "low",
+                                  lifeExp > 48 & lifeExp <= 70 ~ "medium",
+                                  lifeExp > 70 ~ "high"))
+gapminder
+```
+
+Now, what if I want to say years before 2000 are old and years after (and including) 2000 are recent.
+
+```{r}
+gapminder <- gapminder %>%
+  mutate(year_category = ifelse(year < 2000, "old", "recent"))
+gapminder
+```
+
+5. `group_by()` and `summarize()`
+
+These two functions are almost always used together. Generally, `group_by()` will go first, and `summarize()` will come right after it. That means that you won't see `group_by()` then `mutate()` then `summarize()` - it usually just goes `group_by() %>% summarize()`. 
+
+Let's say I want to find the average life expectancy per country and arrange it from highest to lowest. I only want to see the top 5.
+
+```{r}
+gapminder %>%
+  group_by(country) %>% # "per country"
+  summarize(avg_lifeExp = mean(lifeExp)) %>%
+  arrange(desc(avg_lifeExp)) %>%
+  head(n = 5)
+```
+
+What if we wanted to find median GDP per continent?
+
+```{r}
+gapminder %>%
+  group_by(continent) %>%
+  summarize(med_GDP = median(gdpPercap)) %>%
+  arrange(desc(med_GDP))
+```
+

@@ -1,0 +1,55 @@
+---
+title: "Lecture 6"
+author: "Andrea Boskovic"
+date: '2022-07-13'
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(gapminder)
+```
+
+# Reminders
+
+1. Today: Project 1 is assigned officially
+2. Lab 2 due Monday at 11:59 PM
+3. For Wednesday 07/20 Class: NO lecture and Andrea will hold 2 extra office hours:
+    Thursday 2-4PM, Monday 12-1PM
+
+```{r}
+data(gapminder)
+```
+
+# ggplot Histograms
+
+Let's make a histogram of life expectancy over all years/countries.
+
+```{r}
+ggplot(data = gapminder, aes(x = lifeExp)) +
+  geom_histogram(binwidth = 1, 
+                 color = "black",
+                 fill = "#D574AD") + 
+  theme_bw() +
+  labs(title = "Histogram of Life Expectancy in All Countries") + 
+  xlab("Life Expectancy (years)") +
+  ylab("Count") +
+  theme(plot.title = element_text(hjust = 0.5))
+```
+
+# ggplot Boxplot
+
+Let's say we want to look at the distribution of life expectancy by continent in a boxplot.
+
+```{r}
+ggplot(data = gapminder, aes(x = lifeExp, y = continent)) +
+  geom_boxplot(fill = "#9C74D5") +
+  theme_minimal() +
+  labs(x = "Life Expectancy (years)",
+       y = "Continent",
+       title = "Life Expectancy by Continent") +
+  theme(plot.title = element_text(hjust = 0.5)) + 
+  xlim(c(0, 85))
+```
+
