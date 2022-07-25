@@ -12,6 +12,15 @@ knitr::opts_chunk$set(echo = FALSE)
 ### RMarkdown Cheatsheet
 [[.pdf](files/class-notes/cheatsheets/rmarkdown-cheatsheet.pdf)]
 
+### ggplot Cheatsheet
+
+[[.pdf](files/class-notes/cheatsheets/data-visualization.pdf)]
+
+### dplyr Cheatsheet
+
+[[.pdf](files/class-notes/cheatsheets/data-transformation.pdf)]
+
+
 ## Lectures
 
 ### Lecture 2
@@ -33,3 +42,6 @@ knitr::opts_chunk$set(echo = FALSE)
 ### Lecture 7
 [[.html](files/class-notes/lecture 7/lecture7.html)] [[.Rmd](files/class-notes/lecture 7/lecture7.Rmd)]
 
+### Lecture 8
+[[.pdf](files/Tidy Data Pivot Longer.pdf)]
+[[.html](files/class-notes/lecture 8/lecture8.html)] [[.Rmd](files/class-notes/lecture 8/lecture8.Rmd)]

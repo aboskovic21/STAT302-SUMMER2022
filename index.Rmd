@@ -39,8 +39,8 @@ Materials for this course were originally developed by [Bryan Martin](https://br
 
 ### Week Six
 
-* **M 07/25**: Project 1 and (optional/extra credit) Short lab 2 due at 11:59 PM; Short lab 3 assigned
-* **W 07/27**: Short lab 3 due at 11:59 PM; Lab 3 assigned
+* **M 07/25**: (optional/extra credit) Short lab 2 due at 11:59 PM
+* **W 07/27**: Project 1 due at 11:59 PM; Lab 3 assigned
 
 ### Week Seven
 

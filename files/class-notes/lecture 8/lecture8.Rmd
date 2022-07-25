@@ -1,0 +1,71 @@
+---
+title: "Lecture 8"
+author: "Andrea Boskovic"
+date: '2022-07-25'
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+```
+
+# Reminders
+
+1. Project 1 due Wednesday at 11:59 PM
+2. Optional/Extra Credit Short Lab 2 due tonight at 11:59 PM
+3. There will be no short lab 3 (ignore that on the schedule - I will change it)
+
+# Wrapping up the Tidyverse
+
+## `pivot_longer()`
+
+Let's use the `relig_income` dataset
+
+```{r}
+data("relig_income")
+head(relig_income)
+```
+
+To put this in tidy format, we want to make the dataset longer. To do that, we can use a function in `tidyverse` called `pivot_longer()`.
+
+In general, to make your dataset longer:
+
+pivot_longer(name_of_data, cols = __cols_to_move_, 
+                           names_to = __name of new column for "cols"_, 
+                           values_to = __what to call the value column_)
+
+```{r}
+tidy_religion <- pivot_longer(relig_income,
+  cols = c(
+    "<$10k", "$10-20k", "$20-30k", "$30-40k", "$40-50k",
+    "$50-75k", "$75-100k", "$100-150k", ">150k",
+    "Don't know/refused"
+  ),
+  names_to = "income_group",
+  values_to = "count"
+)
+```
+
+## `pivot_wider()`
+
+What if our data is long and we need to make it wide?
+
+```{r}
+data("fish_encounters")
+head(fish_encounters)
+```
+
+We want to give each unique observation in the station column its own column.
+
+In general, using `pivot_wider()` looks like this:
+
+pivot_wider(data_name, 
+            names_from = __where to pull the new column names from_,
+            values_from = __where to get the values that go under each column_)
+
+```{r}
+tidy_fish <- pivot_wider(fish_encounters,
+            names_from = "station",
+            values_from = "seen")
+```
