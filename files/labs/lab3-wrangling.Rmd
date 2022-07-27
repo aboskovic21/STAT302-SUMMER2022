@@ -1,0 +1,90 @@
+---
+title: "Lab 3"
+author: ""
+date: "Due Date Here"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+```
+
+*If you collaborated with anyone, you must include "Collaborated with: FIRSTNAME LASTNAME" at the top of your lab!*
+
+## Part 1. NYC Flights (10 points)
+
+We will use some flight data in this problem. To access it, remember to load the `tidyverse`, `mdsr`, and `nycflights13` packages. If you've never used the `mdsr` package, remember to run `install.packages("mdsr")` in your console (just once, and this shouldn't be in your .Rmd) and THEN run `library(mdsr)`.
+
+1. Load the `flights` dataset. Calculate, for each month, the average distance flown. Arrange from longest to shortest. Call this new dataset `avg_d`.
+
+```{r}
+
+```
+
+2. Load the `airlines` dataset (from the `nycflights13` package). Join this dataset with the `flights` dataset so that no rows are dropped. Keep the `flight`, `carrier`, and `name` columns. Call this new dataset `flightsJoined`. Use the `head()` function to preview the first 5 rows of this dataset
+
+```{r}
+
+```
+
+3. Now, create a new dataset `flightsJoined2` that:
+
+* creates a new variable, `distance_km`, which is distance in kilometers (note that 1 mile is about 1.6 kilometers)
+* keeps only the variables: `name`, `flight`, `arr_delay`, and `distance_km`  
+* keeps only observations where distance is less than 500 kilometers 
+* orders the observtaions from highest to lowest `arr_delay`
+
+Display the first 10 observations of this dataset. Comment on what you see.
+
+*Hint: start again by joining the `flights` and `airlines` datasets as in (2).*
+
+```{r}
+
+```
+
+4. Lastly, compute the number of flights (call this `N`), the average arrival delay (call this `avg_arr_delay`), and the average distance in kilometers (call this `avg_dist_km`) among these flights with distances less than 500 km (i.e. working off of `flightsJoined2`) *grouping by the carrier (aka airline) name*.  Sort the results in descending order based on `avg_arr_delay`. Show your results.
+
+Getting NAs for `avg_arr_delay`?  That happens when some observations are missing that data.  Before grouping and summarizing, add a line to exclude observations with missing arrival delay information using `filter(is.na(arr_delay) == FALSE)`.
+
+```{r}
+
+```
+
+## Part 2. Babynames (10 points)
+
+1. Working with the `babynames` data table in the `babynames` package, create a dataset `babynames2` that only includes years 2000 to 2017. 
+
+Don't have the `babynames` package installed? Remember to use `install.packages(babynames)` the first time you want to use it! Then, you can use `library(babynames)` every time after that.
+
+```{r}
+
+```
+
+2. Create a dataset called `BabyNarrow` that summarizes the total number of people with each name (born between 2000 and 2017 -- use the dataset you made in part 1!!), grouped by sex. Print the data for the 5 most common and 5 least common names. Interpret the results.
+
+Hint: You can pass multiple things into the `group_by` function!
+
+```{r}
+
+```
+
+3. What are the most popular boy names and girl names in each decade? Visaulize this with a plot.
+
+To do this, you will want to:
+
+(a) Use the original `babynames` dataset
+(b) Create a decade variable (Hint: you may find this useful - `decade = floor(year/10)*10`)
+(c) Some sort of `group_by`. Think about what we want to show! Ask yourself: "I want a total count for each ____, ____, and ___?"
+(d) Calculate the total count.
+(e) Now, get the most popular names. Hint: Use `group_by()` and `slice_max()`.
+(f) Make your plot. To display names on top of the points, use `ggrepel::geom_label_repel(aes(label = name))`. You may need to install the `ggrepel` package. 
+
+Remember to label your plot and do what's appropriate to make it look presentable!
+
+Finally, comment on what you see in a few sentences.
+
+```{r}
+
+```
+
