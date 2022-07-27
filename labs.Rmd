@@ -13,6 +13,6 @@ knitr::opts_chunk$set(echo = FALSE)
 
 
 ### Lab 3: Data wrangling and plotting
-[[.html](files/labs/lab3-wrangling.html)] [[.Rmd](https://raw.githubusercontent.com/aboskovic/STAT302-SUMMER2022/main/files/labs/lab3-wrangling.Rmd)]
+[[.html](files/labs/lab3-wrangling.html)] [[.Rmd](https://raw.githubusercontent.com/aboskovic21/STAT302-SUMMER2022/main/files/labs/lab3-wrangling.Rmd)]
 
 <!-- ### Lab 4: Prediction and error [[.html](files/labs/lab-04_train-test-cv.html)] [[.Rmd](https://raw.githubusercontent.com/svteichman/STAT302-SPR2022/main/files/labs/lab-04_train-test-cv.Rmd)] -->
