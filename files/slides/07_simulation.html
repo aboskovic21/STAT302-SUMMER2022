@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="" xml:lang="">
   <head>
-    <title>STAT 302, Lecture Slides 7</title>
+    <title>STAT 302, Lecture Slides 4</title>
     <meta charset="utf-8" />
-    <meta name="author" content="Sarah Teichman" />
+    <meta name="author" content="Andrea Boskovic (adapted from slides by Sarah Teichman and Peter Gao)" />
+    <script src="07_simulation_files/header-attrs/header-attrs.js"></script>
     <link href="07_simulation_files/remark-css/default.css" rel="stylesheet" />
     <link rel="stylesheet" href="gao-theme.css" type="text/css" />
     <link rel="stylesheet" href="gao-theme-fonts.css" type="text/css" />
@@ -12,23 +13,20 @@
     <textarea id="source">
 class: center, title-slide
 
-# STAT 302, Lecture Slides 7
+.title[
+# STAT 302, Lecture Slides 4
+]
+.subtitle[
 ## Simulation Studies
-### Sarah Teichman
+]
+.author[
+### Andrea Boskovic (adapted from slides by Sarah Teichman and Peter Gao)
+]
 
 ---
 
 
 
-
-# Today's pet picture 
-
-
-&lt;img src="../../files/images/pets/Luda.png" width="400px" style="display: block; margin: auto;" /&gt;
-
-Thanks Riley! 
-
----
 
 # Outline
 
@@ -131,7 +129,7 @@ mean(coins == 5)
 ```
 
 ```
-## [1] 0.03125
+## [1] 0.03032
 ```
 
 ---
@@ -162,7 +160,7 @@ mean(data1)
 ```
 
 ```
-## [1] 0.783191
+## [1] 1.03717
 ```
 
 ```r
@@ -171,7 +169,7 @@ mean(data2)
 ```
 
 ```
-## [1] 1.123284
+## [1] 1.24479
 ```
 
 ```r
@@ -180,7 +178,7 @@ mean(data3)
 ```
 
 ```
-## [1] 0.989531
+## [1] 1.05279
 ```
 
 ---
@@ -203,12 +201,12 @@ head(result_matrix)
 
 ```
 ##           [,1]      [,2]      [,3]
-## [1,] 0.9618710 1.0154072 0.9765661
-## [2,] 1.0393700 0.8782085 1.0441141
-## [3,] 1.2077076 0.9285779 0.9384220
-## [4,] 1.5195154 0.9722360 0.9870572
-## [5,] 0.6031563 1.0005390 0.9823156
-## [6,] 1.2328754 1.0969512 1.0012434
+## [1,] 0.8277216 0.9904383 1.0284512
+## [2,] 0.5741461 1.1080411 1.0384741
+## [3,] 1.2168993 1.0856978 0.9515758
+## [4,] 1.0619831 0.9719530 0.9927382
+## [5,] 1.0254838 0.9191355 1.0033273
+## [6,] 0.7947740 0.8720923 0.9859772
 ```
 
 ---
@@ -223,7 +221,7 @@ var(result_matrix[, 1])
 ```
 
 ```
-## [1] 0.1018188
+## [1] 0.09852452
 ```
 
 ```r
@@ -231,7 +229,7 @@ var(result_matrix[, 2])
 ```
 
 ```
-## [1] 0.01001158
+## [1] 0.009665753
 ```
 
 ```r
@@ -239,7 +237,7 @@ var(result_matrix[, 3])
 ```
 
 ```
-## [1] 0.001003858
+## [1] 0.00101803
 ```
 
 ---
@@ -340,6 +338,40 @@ generate_data_once &lt;- function(n) {
 
 ---
 
+# Test function 
+
+Start with `nsim = 10`. Check that this works and gives you reasonable results! 
+
+
+```r
+n_sim &lt;- 10
+result_matrix &lt;- matrix(nrow = n_sim, ncol = 3)
+for (i_sim in 1:n_sim) {
+  result_matrix[i_sim, 1] &lt;- mean(rexp(10, rate = 1))
+  result_matrix[i_sim, 2] &lt;- mean(rexp(100, rate = 1))
+  result_matrix[i_sim, 3] &lt;- mean(rexp(1000, rate = 1))
+}
+```
+
+---
+
+# Test function 
+
+If `nsim = 10` works as expected, them move on to your planned number of simulations. 
+
+
+```r
+n_sim &lt;- 10000
+result_matrix &lt;- matrix(nrow = n_sim, ncol = 3)
+for (i_sim in 1:n_sim) {
+  result_matrix[i_sim, 1] &lt;- mean(rexp(10, rate = 1))
+  result_matrix[i_sim, 2] &lt;- mean(rexp(100, rate = 1))
+  result_matrix[i_sim, 3] &lt;- mean(rexp(1000, rate = 1))
+}
+```
+
+---
+
 # Report results 
 
 ## Example: flipping coins 
@@ -361,7 +393,7 @@ ggplot(plot_df, aes(x = coins)) +
 ]
 
 .pull-right[
-![](07_simulation_files/figure-html/unnamed-chunk-10-1.png)&lt;!-- --&gt;
+![](07_simulation_files/figure-html/unnamed-chunk-11-1.png)&lt;!-- --&gt;
 ]
 
 ---
@@ -393,14 +425,15 @@ ggplot(plot_df, aes(x = n, y = var)) +
 ]
 
 .pull-right[
-![](07_simulation_files/figure-html/unnamed-chunk-12-1.png)&lt;!-- --&gt;
+![](07_simulation_files/figure-html/unnamed-chunk-13-1.png)&lt;!-- --&gt;
 ]
 
 ---
 
 # Live coding example 
 
-Study the relationship between expected and observed variance for draws from a binomial distribution with sample sizes `\(n=10\)` and `\(n=1000\)`. Consider the binomial distribution with `\(5\)` trials and probabilities `\(p\)` in the set `\(\{0.2, 0.4, 0.6, 0.8\}\)`.
+Study the relationship between expected and observed variance for draws from a binomial distribution with sample sizes `\(n=10\)` and `\(n=1000\)`. Consider the binomial distribution with `\(5\)` trials and probabilities `\(p\)` in the set `\(\{0.2, 0.4, 0.6, 0.8\}\)`. 
+
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
@@ -448,6 +481,19 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
     deleted = true;
   });
 })();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
 (function() {
   "use strict"
   // Replace <script> tags in slides area to make them executable

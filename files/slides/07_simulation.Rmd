@@ -1,7 +1,7 @@
 ---
-title: "STAT 302, Lecture Slides 7"
+title: "STAT 302, Lecture Slides 4"
 subtitle: "Simulation Studies"
-author: "Sarah Teichman"
+author: "Andrea Boskovic (adapted from slides by Sarah Teichman and Peter Gao)"
 date: ""
 output:
   xaringan::moon_reader:
@@ -21,17 +21,6 @@ knitr::opts_chunk$set(error = TRUE)
 library(kableExtra)
 library(tidyverse)
 ```
-
-# Today's pet picture 
-
-
-```{r, echo = FALSE, out.width = "400px", fig.align = "center"}
-knitr::include_graphics("../../files/images/pets/Luda.png")
-```
-
-Thanks Riley! 
-
----
 
 # Outline
 
