@@ -1,0 +1,135 @@
+---
+title: 'Lecture 10: Simulations'
+author: "Andrea Boskovic (adapted from STAT336 at Stanford)"
+date: "2022-08-01"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+```
+
+## Getting Started
+
+When wanting to produce the same results with a random number generator it is important to set a starting point. This is important if you want to reproduce the results of a simulation or algorithm, and is very important in debugging.
+
+Compare for instance the following output:
+
+```{r}
+vecpoisson = rpois(100,5)
+mean(vecpoisson)
+```
+
+If you do this alot, you get many different values. In fact if you put all the values together you would get what we call the sampling distribution of the mean of 100 Poisson random variables.
+
+0) Why don't you get the same answer every time?
+
+Now try:
+
+```{r}
+set.seed(198911)
+vecpoisson=rpois(100,5)
+mean(vecpoisson)
+```
+
+```{r}
+set.seed(198911)
+vecpoisson=rpois(100,5)
+mean(vecpoisson)
+```
+
+Moral of the story: set a seed!!!
+
+## Using the apply function
+
+In general, we want to avoid `for` loops in R since that is slower than working with functions such as `apply()`.
+
+**Fact:** We know the sum of exponential distributions give you a gamma distribution. Specifically, if $X_1, X_2,\dots,\, X_n \sim Exp(\lambda)$, then $\sum_{i=1}^n X_i \sim Gamma(n,\lambda)$.
+
+We will generate 5 samples from an exponential with a rate parameter 0.1 and sum them together. This is `sum(rexp(n = nexps, rate=rate))`. The function `replicate()` allows us to do this many times with very little code. Here, we do this sum 50,000 times to get an idea of the distribution.
+
+```{r}
+reps <- 50000
+nexps <- 5
+rate <- 0.1
+set.seed(0)
+
+x1 <- replicate(reps, sum(rexp(n = nexps, rate = rate)))
+head(x1)
+```
+
+Now let's overlay our results from our simulation of the sum of exponentials `x1` with a gamma distribution.
+
+```{r}
+ggplot(data.frame(x1), aes(x1)) +
+  geom_histogram(aes(y=..density..)) +
+  stat_function(
+    fun = function(x) dgamma(x, shape = nexps, rate = rate),
+    color = "red", size = 2
+  )
+```
+
+The simulations runs as expected!!
+
+## Practice with `apply()`
+
+### Problem 1
+
+Let $U_1, U_2, U_3$ all come from a $Unif(0,1)$ distribution. Let $M = \max(U_1, U_2, U_3)$. Estimate (to 3 significant digits) the probability $\mathbb{P}(M > 0.75)$.
+
+```{r}
+set.seed(0)
+
+
+u1 <- runif(n = 1000, min = 0, max = 1)
+u2 <- runif(n = 1000, min = 0, max = 1)
+u3 <- runif(n = 1000, min = 0, max = 1)
+unifs <- cbind(u1, u2, u3)
+
+m <- apply(unifs, 1, max)
+unifs <- cbind(unifs, m)
+
+unifs <- unifs %>%
+  as.data.frame() %>%
+  mutate(above.75 = ifelse(m > 0.75, 1, 0))
+
+sum(unifs$above.75 / 1000)
+```
+
+### Problem 2
+
+Let $Z_{(n)}$ be maximum of $n$ standard normal observations. Estimate what $n$ should be so that $\mathbb{P}(Z_{(n)} > 4) = 0.25$.
+
+```{r}
+
+```
+
+## Simulating a Linear Model
+
+Simulating random numbers is useful but sometimes we want to simulate values that come from a specific model. For that we need to specify the model and then simulate from it using the functions described above.
+
+Suppose we want to simulate from the following linear model:
+
+$$y = \beta_0 + \beta_1x + \varepsilon,$$
+where $\varepsilon \sim N(0, 2)$, $x \sim N(0,1)$, $\beta_0 = 0.5$, and $\beta_1 = 2$.
+
+```{r}
+## Always set your seed!
+set.seed(20)             
+
+## Simulate predictor variable
+x <- rnorm(100)          
+
+## Simulate the error term
+e <- rnorm(100, 0, 2)    
+
+## Compute the outcome via the model
+y <- 0.5 + 2 * x + e     
+summary(y)
+```
+
+```{r}
+plot(x, y)
+```
+
