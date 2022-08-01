@@ -21,8 +21,8 @@
       "title": "STAT 302",
       "description": "Statistical Software and its Applications\n",
       "author": [],
-      "contents": "\nMaterials for this course were originally developed by Bryan\nMartin.\nSchedule\nWeek One\nM 06/20: No class - Juneteenth\nW 06/22: Short lab 0 assigned\nWeek Two\nM 06/27: Short lab 0 due at 11:59 PM; Short Lab 1\nassigned\nW 06/29: Short lab 1 due at 11:59 PM; Lab 1\nassigned\nWeek Three\nM 07/04: No class - July 4th\nW 07/06: No new assignment\nWeek Four\nM 07/11: Lab 2 assigned; Lab 1 due at 11:59 PM\nW 07/13: Project 1 assigned\nWeek Five\nM 07/18: Lab 2 due at 11:59 PM\nW 07/20: (optional/extra credit) Short lab 2\nassigned\nWeek Six\nM 07/25: (optional/extra credit) Short lab 2 due at\n11:59 PM\nW 07/27: Project 1 due at 11:59 PM; Lab 3\nassigned\nWeek Seven\nM 08/01: Lab 3 due at 11:59 PM; Project 2\nassigned\nW 08/03: Short lab 4 assigned\nWeek Eight\nM 08/08: Short lab 4 due at 11:59 PM; Short lab 5\nassigned\nW 08/10: Short lab 5 and Project 2 due at 11:59 PM;\nProject 3 and (optional) Lab 4 assigned\nWeek Nine\nM 08/15: No new assignment\nW 08/17: No new assignment\nF 08/19: Project 3 due at 11:59 PM; (optional) Lab\n4 due at 11:59 PM\n\n\n\n",
-      "last_modified": "2022-07-25T15:07:15-07:00"
+      "contents": "\nMaterials for this course were originally developed by Bryan\nMartin.\nSchedule\nWeek One\nM 06/20: No class - Juneteenth\nW 06/22: Short lab 0 assigned\nWeek Two\nM 06/27: Short lab 0 due at 11:59 PM; Short Lab 1\nassigned\nW 06/29: Short lab 1 due at 11:59 PM; Lab 1\nassigned\nWeek Three\nM 07/04: No class - July 4th\nW 07/06: No new assignment\nWeek Four\nM 07/11: Lab 2 assigned; Lab 1 due at 11:59 PM\nW 07/13: Project 1 assigned\nWeek Five\nM 07/18: Lab 2 due at 11:59 PM\nW 07/20: (optional/extra credit) Short lab 2\nassigned\nWeek Six\nM 07/25: (optional/extra credit) Short lab 2 due at\n11:59 PM\nW 07/27: Project 1 due at 11:59 PM; Lab 3\nassigned\nWeek Seven\nM 08/01: Lab 3 due at 11:59 PM; Project 2\nassigned\nW 08/03: Short lab 3 assigned\nWeek Eight\nM 08/08: Short lab 3 due at 11:59 PM; Short lab 4\nassigned\nW 08/10: Short lab 4 and Project 2 due at 11:59 PM;\nProject 3 and (optional) Lab 4 assigned\nWeek Nine\nM 08/15: No new assignment\nW 08/17: No new assignment\nF 08/19: Project 3 due at 11:59 PM; (optional) Lab\n4 due at 11:59 PM\n\n\n\n",
+      "last_modified": "2022-08-01T14:10:34-07:00"
     },
     {
       "path": "labs.html",
@@ -45,8 +45,8 @@
       "title": "Short Labs",
       "description": "",
       "author": [],
-      "contents": "\nShort Lab 0: Course\nOverview [.html] [.Rmd]\nShort Lab 1:\nIntroduction to R [.html] [.Rmd]\nShort Lab 2:\nStrings, Factors, and Dates [.html] [.Rmd]\n\n\n\n\n\n\n\n\n\n\n",
-      "last_modified": "2022-07-19T23:11:22-07:00"
+      "contents": "\nShort Lab 0: Course\nOverview [.html] [.Rmd]\nShort Lab 1:\nIntroduction to R [.html] [.Rmd]\nShort Lab 2:\nStrings, Factors, and Dates [.html] [.Rmd]\n\nShort Lab 3: Setting\nup GitHub [.html] [.Rmd]\n\n\n\n\n\n\n\n\n",
+      "last_modified": "2022-08-01T14:40:30-07:00"
     },
     {
       "path": "slides.html",

@@ -45,12 +45,12 @@ Materials for this course were originally developed by [Bryan Martin](https://br
 ### Week Seven
 
 * **M 08/01**: Lab 3 due at 11:59 PM; Project 2 assigned
-* **W 08/03**: Short lab 4 assigned
+* **W 08/03**: Short lab 3 assigned
 
 ### Week Eight
 
-* **M 08/08**: Short lab 4 due at 11:59 PM; Short lab 5 assigned
-* **W 08/10**: Short lab 5 and Project 2 due at 11:59 PM; Project 3 and (optional) Lab 4 assigned
+* **M 08/08**: Short lab 3 due at 11:59 PM; Short lab 4 assigned
+* **W 08/10**: Short lab 4 and Project 2 due at 11:59 PM; Project 3 and (optional) Lab 4 assigned
 
 ### Week Nine
 
