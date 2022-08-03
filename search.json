@@ -52,8 +52,8 @@
       "path": "slides.html",
       "title": "Lecture Slides",
       "author": [],
-      "contents": "\nLecture 00: Course Overview [.html] [.Rmd]\nLecture 01: Introduction to R [.html] [.Rmd]\nLecture 02: R Fundamentals [.html] [.Rmd]\nLecture 03: Data Visualization and Manipulation [.html] [.Rmd]\nLecture 04: Simulation [.html] [.Rmd]\nLecture 04: Code Example [.html] [.Rmd]\n\n\n\n\n",
-      "last_modified": "2022-08-01T11:25:45-07:00"
+      "contents": "\nLecture 00: Course Overview [.html] [.Rmd]\nLecture 01: Introduction to R [.html] [.Rmd]\nLecture 02: R Fundamentals [.html] [.Rmd]\nLecture 03: Data Visualization and Manipulation [.html] [.Rmd]\nLecture 04: Simulation [.html] [.Rmd]\nLecture 04: Code Example [.html] [.Rmd]\n\nLecture 05: Debugging and Git [.html] [.Rmd]\n\n\n\n",
+      "last_modified": "2022-08-02T21:34:58-07:00"
     },
     {
       "path": "syllabus.html",
