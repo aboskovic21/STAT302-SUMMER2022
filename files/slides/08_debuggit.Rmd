@@ -1,6 +1,6 @@
 ---
 title: "STAT 302, Lecture Slides 5"
-subtitle: "Debugging and Version Control"
+subtitle: "Version Control, Git, and Github"
 author: "Andrea Boskovic (adapted from slides by Sarah Teichman and Peter Gao)"
 date: ""
 output:
