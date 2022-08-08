@@ -45,8 +45,8 @@
       "title": "Short Labs",
       "description": "",
       "author": [],
-      "contents": "\nShort Lab 0: Course\nOverview [.html] [.Rmd]\nShort Lab 1:\nIntroduction to R [.html] [.Rmd]\nShort Lab 2:\nStrings, Factors, and Dates [.html] [.Rmd]\n\nShort Lab 3: Setting\nup GitHub [.html] [.Rmd]\nShort Lab 4: Shiny [.html] [.Rmd]\n\n\n\n\n\n\n\n",
-      "last_modified": "2022-08-08T10:17:31-07:00"
+      "contents": "\nShort Lab 0: Course\nOverview [.html] [.Rmd]\nShort Lab 1:\nIntroduction to R [.html] [.Rmd]\nShort Lab 2:\nStrings, Factors, and Dates [.html] [.Rmd]\n\nShort Lab 3: Setting\nup GitHub [.html] [.Rmd]\nShort Lab 4: Shiny [.R]\n\n\n\n\n\n\n\n",
+      "last_modified": "2022-08-08T10:26:40-07:00"
     },
     {
       "path": "slides.html",
