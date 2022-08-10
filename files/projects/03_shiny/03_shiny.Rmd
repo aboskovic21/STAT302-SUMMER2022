@@ -1,0 +1,46 @@
+---
+title: "Project 3: Shiny"
+author: "STAT 302"
+date: ""
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+```
+
+# Data
+
+In this project, you have two options for data. You can either: 
+
+(a) Choose your own dataset (but make sure I approve it), or
+(b) Use the [covdata](https://kjhealy.github.io/covdata/index.html) package to access COVID data. 
+
+Note that I chose `covdata` because it has multiple datasets relating to COVID-19 including the Apple Mobility data and the New York Times COVID data. If you decide to choose your own dataset, make sure you choose something that you'll be able to explore in depth.
+
+# Task 
+
+This project is open-ended. You will develop a Shiny application that visualizes and allows a user to play with data from the [covdata package](https://kjhealy.github.io/covdata/index.html) or a dataset of your choosing. 
+
+### Guidelines
+
+Your app should:
+
+1. Look **professional**. This means it should have a proper title, headings, labels, etc. 
+2. Have at least **3 different visualizations** (i.e., boxplots, bar charts, scatterplots, line graphs, etc.).
+3. Have **2 or more tabs**. These can be for displaying data, text, images, visualizations, and other information you think is important. 
+4. Have **two or more user inputs per tab**. This could be a dropdown menu, buttons, checkboxes, etc. 
+
+### Example
+
+[This Shiny app](https://leahjohnson.shinyapps.io/ps3B-shiny/) is a good example of what I'm looking for, but note that this student went above and beyond expectations. Your application does not need to look like this! 
+
+# Submission
+
+You will submit your `app.R` file on Canvas. If you deploy your app on `shinyapps.io`, I will give you an additional 3 points of extra credit on this project grade.
+
+
+
+
+
